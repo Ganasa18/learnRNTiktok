@@ -26,7 +26,18 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyCIJQ7zw7Gy9iJcmc7c8zmnNsar4LejmzM",
+          "authDomain": "clonetiktoklearn.firebaseapp.com",
+          "projectId": "clonetiktoklearn",
+          "storageBucket": "clonetiktoklearn.appspot.com",
+          "messagingSenderId": "750855621620",
+          "appId": "1:750855621620:web:b20dde744d6aacc6a747a1",
+          "measurementId": "G-J2CVJN10BM"
+        }
+      }
     }
   }
 }
