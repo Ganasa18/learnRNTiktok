@@ -1,9 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import firebase from "firebase/app";
 import Constants from "expo-constants";
+import firebase from "firebase/app";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import Reducers from "./src/redux/reducers";
 import { AuthScreen } from "./src/screens";
@@ -11,8 +9,11 @@ import { AuthScreen } from "./src/screens";
 const store = createStore(Reducers, applyMiddleware(thunk));
 
 // Initialize Firebase
-if (firebase.apps.length == 0) {
+
+if (firebase.apps.length === 0) {
   firebase.initializeApp(Constants.manifest.web.config.firebase);
+} else {
+  firebase.app();
 }
 
 export default function App() {
